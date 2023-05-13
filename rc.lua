@@ -23,7 +23,6 @@ local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 
 -- Theme handling library
 local beautiful = require("beautiful")
-local dpi = beautiful.xresources.apply_dpi
 
 -- Notification library
 local naughty = require("naughty")
@@ -192,7 +191,6 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Add widgets to the wibox
     s.mywibox:setup {
-        expand = "none",
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
