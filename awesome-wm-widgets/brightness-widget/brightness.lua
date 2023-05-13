@@ -33,7 +33,7 @@ local function show_warning(message)
 end
 
 local function worker(user_args)
-	  local args = user_args or {}
+	local args = user_args or {}
 
     local type = args.type or 'arc' -- arc or icon_and_text
     local path_to_icon = args.path_to_icon or ICON_DIR .. 'brightness.svg'
@@ -105,11 +105,12 @@ local function worker(user_args)
                 layout = wibox.container.place
             },
             max_value = 100,
-            thickness = 2,
+            thickness = 1,
             start_angle = 4.71238898, -- 2pi*3/4
             forced_height = 18,
             forced_width = 18,
             paddings = 2,
+            colors = args.colors or {'#ae73eb'},
             widget = wibox.container.arcchart,
             set_value = function(self, level)
                 self:set_value(level)

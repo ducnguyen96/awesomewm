@@ -84,7 +84,7 @@ theme.systray_icon_spacing = dpi(5)
 -- Titlebars
 theme.titlebars_enabled = false
 
-awful.spawn.with_shell("feh --bg-fill ~/.config/awesome/themes/pastel/wallpaper/blurredWallpaper.png")
+awful.spawn.with_shell("feh --bg-fill ~/.config/awesome/themes/pastel/wallpaper/wallpaper.jpg")
 
 -- ===================================================================
 -- Icons

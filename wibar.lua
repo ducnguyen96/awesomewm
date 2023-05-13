@@ -103,18 +103,28 @@ awful.screen.connect_for_each_screen(function(s)
                 idth = 70,
                 step_width = 2,
                 step_spacing = 0,
-                color = '#434c5e'
+                color = '#38785f'
             }),
-            ram_widget(),
+            ram_widget({
+                color_free = '#fffff344',
+                color_used = '#633bd9',
+            }),
             brightness_widget{
                 type = 'arc',
                 program = 'brightnessctl',
-                step = 10,        
+                step = 10,
+                colors = {'#633bd9'}        
             },
-            volume_widget{widget_type = 'arc'},
+            volume_widget{
+                widget_type = 'arc',
+                thickness = 1,
+                main_color = '#633bd9',
+                mute_color = '#f77845'
+            },
             batteryarc_widget({
                 show_current_level = true,
-                arc_thickness = 2,
+                arc_thickness = 1,
+                main_color = '#633bd9',
             }),
             -- s.mylayoutbox,
         },

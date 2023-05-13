@@ -96,7 +96,7 @@ local function worker(user_args)
 
     local args = user_args or {}
 
-    local width = args.width or 50
+    local width = args.width or 100
     local step_width = args.step_width or 2
     local step_spacing = args.step_spacing or 1
     local color = args.color or beautiful.fg_normal
