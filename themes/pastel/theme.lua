@@ -89,11 +89,12 @@ theme.titlebars_enabled = false
 -- Icons
 -- ===================================================================
 
-
 -- Define layout icons
-theme.layout_tile = "~/.config/awesome/icons/layouts/tiled.png"
-theme.layout_floating = "~/.config/awesome/icons/layouts/floating.png"
-theme.layout_max = "~/.config/awesome/icons/layouts/maximized.png"
+theme.layout_tile = "~/.config/awesome/themes/pastel/icons/tilew.png"
+theme.layout_floating = "~/.config/awesome/themes/pastel/icons/floatingw.png"
+theme.layout_max = "~/.config/awesome/themes/pastel/icons/maxw.png"
+theme.layout_tilebottom = "~/.config/awesome/themes/pastel/icons/tilebottomw.png"
+theme.layout_tiletop = "~/.config/awesome/themes/pastel/icons/tiletopw.png"
 
 theme.icon_theme = "Tela-dark"
 

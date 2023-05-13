@@ -10,7 +10,7 @@ require("awful.autofocus")
 -- Theme handling library
 local theme = "pastel" -- available: pastel
 local beautiful = require("beautiful")
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "-theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "/theme.lua")
 
 -- Error handling
 require("./error-handling")()
