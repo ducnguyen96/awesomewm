@@ -11,3 +11,4 @@ terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 config_dir = os.getenv("HOME") .. "/.config/awesome/"
+launcher = "rofi -normal-window -modi drun -show drun"

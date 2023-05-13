@@ -8,7 +8,9 @@ local awful = require("awful")
 require("awful.autofocus")
 
 -- Theme handling library
+local theme = "pastel" -- available: pastel
 local beautiful = require("beautiful")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "-theme.lua")
 
 -- Error handling
 require("./error-handling")()
@@ -16,21 +18,11 @@ require("./error-handling")()
 -- Layouts
 require("./layouts")
 
--- Themes define colours, icons, font and wallpapers.
-local themes = {
-    "pastel", -- 1
-}
-
--- change this number to use the corresponding theme
-local theme = themes[1]
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "-theme.lua")
-
 -- Wibar
 require("./wibar")
 
 -- Set keys
 require("./keys")
-root.keys(globalkeys)
 
 -- Rules
 require("./rules")
