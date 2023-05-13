@@ -108,8 +108,8 @@ awful.screen.connect_for_each_screen(function(s)
             ram_widget(),
             brightness_widget{
                 type = 'arc',
-                program = 'light',
-                step = 2,        
+                program = 'brightnessctl',
+                step = 10,        
             },
             volume_widget{widget_type = 'arc'},
             batteryarc_widget({
