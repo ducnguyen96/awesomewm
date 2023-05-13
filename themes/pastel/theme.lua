@@ -8,7 +8,7 @@
 -- ===================================================================
 -- Initialization
 -- ===================================================================
-
+local awful = require("awful")
 
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
@@ -84,6 +84,7 @@ theme.systray_icon_spacing = dpi(5)
 -- Titlebars
 theme.titlebars_enabled = false
 
+awful.spawn.with_shell("feh --bg-fill ~/.config/awesome/themes/pastel/wallpaper/blurredWallpaper.png")
 
 -- ===================================================================
 -- Icons
