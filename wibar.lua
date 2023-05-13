@@ -116,7 +116,7 @@ awful.screen.connect_for_each_screen(function(s)
                 show_current_level = true,
                 arc_thickness = 2,
             }),
-            s.mylayoutbox,
+            -- s.mylayoutbox,
         },
     }
 end)
