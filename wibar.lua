@@ -108,7 +108,7 @@ awful.screen.connect_for_each_screen(function(s)
             ram_widget(),
             brightness_widget{
                 type = 'arc',
-                program = 'xbacklight',
+                program = 'light',
                 step = 2,        
             },
             volume_widget{widget_type = 'arc'},
@@ -123,5 +123,6 @@ end)
 -- }}}
 
 return {
-    volume_widget = volume_widget
+    volume_widget = volume_widget,
+    brightness_widget= brightness_widget
 }

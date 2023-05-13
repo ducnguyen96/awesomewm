@@ -122,7 +122,13 @@ globalkeys = gears.table.join(
     awful.key({ }, "\\", function() wibar.volume_widget:toggle() end),
     awful.key({ }, "XF86AudioLowerVolume", function() wibar.volume_widget:dec(5) end),
     awful.key({ }, "XF86AudioRaiseVolume", function() wibar.volume_widget:inc(5) end),
-    awful.key({ }, "XF86AudioMute", function() wibar.volume_widget:toggle() end)
+    awful.key({ }, "XF86AudioMute", function() wibar.volume_widget:toggle() end),
+
+    -- Light
+    awful.key({}, "XF86MonBrightnessDown", function() wibar.brightness_widget:dec() end),
+    awful.key({}, "XF86MonBrightnessUp", function() wibar.brightness_widget:inc() end),
+    awful.key({}, "F5", function() wibar.brightness_widget:dec() end),
+    awful.key({}, "F6", function() wibar.brightness_widget:inc() end)
 )
 
 clientkeys = gears.table.join(
