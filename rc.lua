@@ -61,7 +61,12 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+local themes = {
+    "pastel", -- 1
+}
+-- change this number to use the corresponding theme
+local theme = themes[1]
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "-theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
