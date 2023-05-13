@@ -17,10 +17,10 @@ local utils = require("awesome-wm-widgets.volume-widget.utils")
 
 
 local LIST_DEVICES_CMD = [[sh -c "pacmd list-sinks; pacmd list-sources"]]
-local function GET_VOLUME_CMD(device) return 'amixer -D ' .. device .. ' sget Master' end
-local function INC_VOLUME_CMD(device, step) return 'amixer -D ' .. device .. ' sset Master ' .. step .. '%+' end
-local function DEC_VOLUME_CMD(device, step) return 'amixer -D ' .. device .. ' sset Master ' .. step .. '%-' end
-local function TOG_VOLUME_CMD(device) return 'amixer -D ' .. device .. ' sset Master toggle' end
+local function GET_VOLUME_CMD(device) return 'amixer -D ' .. 'default' .. ' sget Master' end
+local function INC_VOLUME_CMD(device, step) return 'amixer -D ' .. 'default' .. ' sset Master ' .. step .. '%+' end
+local function DEC_VOLUME_CMD(device, step) return 'amixer -D ' .. 'default' .. ' sset Master ' .. step .. '%-' end
+local function TOG_VOLUME_CMD(device) return 'amixer -D ' .. 'default' .. ' sset Master toggle' end
 
 
 local widget_types = {

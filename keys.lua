@@ -9,6 +9,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 require("./consts")
+local wibar = require("./wibar")
 
 menubar.utils.terminal = terminal
 
@@ -112,7 +113,16 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- Widgets
+    -- Volumes
+    awful.key({ }, "F7", function() wibar.volume_widget:dec(5) end),
+    awful.key({ }, "F8", function() wibar.volume_widget:inc(5) end),
+    awful.key({ }, "\\", function() wibar.volume_widget:toggle() end),
+    awful.key({ }, "XF86AudioLowerVolume", function() wibar.volume_widget:dec(5) end),
+    awful.key({ }, "XF86AudioRaiseVolume", function() wibar.volume_widget:inc(5) end),
+    awful.key({ }, "XF86AudioMute", function() wibar.volume_widget:toggle() end)
 )
 
 clientkeys = gears.table.join(
