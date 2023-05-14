@@ -16,10 +16,10 @@ menubar.utils.terminal = terminal
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    --           {description = "view previous", group = "tag"}),
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    --           {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Tab", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
@@ -121,7 +121,7 @@ globalkeys = gears.table.join(
     -- Volumes
     awful.key({ }, "F7", function() wibar.volume_widget:dec(5) end),
     awful.key({ }, "F8", function() wibar.volume_widget:inc(5) end),
-    awful.key({ }, "\\", function() wibar.volume_widget:toggle() end),
+    awful.key({ "Shift" }, "F8", function() wibar.volume_widget:toggle() end),
     awful.key({ }, "XF86AudioLowerVolume", function() wibar.volume_widget:dec(5) end),
     awful.key({ }, "XF86AudioRaiseVolume", function() wibar.volume_widget:inc(5) end),
     awful.key({ }, "XF86AudioMute", function() wibar.volume_widget:toggle() end),
