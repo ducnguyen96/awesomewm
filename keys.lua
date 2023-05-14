@@ -69,6 +69,8 @@ globalkeys = gears.table.join(
               { description = "application launcher", group = "launcher" }),
     awful.key({ }, "F4", function() awful.spawn(terminal .. " -e pulsemixer") end,
               { description = "application launcher", group = "launcher" }),
+    awful.key({ modkey }, "b", function() awful.spawn("bookmark") end,
+              { description = "application launcher", group = "launcher" }),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
