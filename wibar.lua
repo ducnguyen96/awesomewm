@@ -11,6 +11,7 @@ local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local theme = require("themes/pastel/theme")
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -67,7 +68,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
+    -- Create an imagebox widget which will contain an icon indicating which layout we're using.q
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
     s.mylayoutbox:buttons(gears.table.join(
@@ -103,28 +104,28 @@ awful.screen.connect_for_each_screen(function(s)
                 idth = 70,
                 step_width = 2,
                 step_spacing = 0,
-                color = '#38785f'
+                color = theme.border_focus
             }),
             ram_widget({
-                color_free = '#fffff344',
-                color_used = '#633bd9',
+                color_free = theme.bg_minimize,
+                color_used = theme.border_focus,
             }),
             brightness_widget{
                 type = 'arc',
                 program = 'brightnessctl',
                 step = 10,
-                colors = {'#633bd9'}        
+                colors = {theme.border_focus}        
             },
             volume_widget{
                 widget_type = 'arc',
                 thickness = 1,
-                main_color = '#633bd9',
-                mute_color = '#f77845'
+                main_color = theme.border_focus,
+                mute_color = theme.bg_urgent
             },
             batteryarc_widget({
                 show_current_level = true,
                 arc_thickness = 1,
-                main_color = '#633bd9',
+                main_color = theme.border_focus,
             }),
             -- s.mylayoutbox,
         },
