@@ -87,7 +87,7 @@ local function worker(user_args)
     end
 
     local function update_widget(widget, stdout)
-        local charge = 0
+        local charge = string.len(stdout) == 0 and 100 or 0
         local status
         for s in stdout:gmatch("[^\r\n]+") do
             local cur_status, charge_str, _ = string.match(s, '.+: ([%a%s]+), (%d?%d?%d)%%,?(.*)')
