@@ -29,3 +29,5 @@ require("./rules")
 
 -- Sigals
 require("./signals")
+
+awful.spawn.with_shell("xrandr --output DP-4 --rotate left")
