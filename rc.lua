@@ -30,4 +30,4 @@ require("./rules")
 -- Sigals
 require("./signals")
 
-awful.spawn.with_shell("xrandr --output DP-4 --rotate left")
+awful.spawn.with_shell("xrandr --output DP-0 --rotate left")
