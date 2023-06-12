@@ -109,9 +109,9 @@ globalkeys = gears.table.join(
 
     -- Widgets
     -- Volumes
-    awful.key({ }, "F7", function() wibar.volume_widget:dec(5) end),
-    awful.key({ }, "F8", function() wibar.volume_widget:inc(5) end),
-    awful.key({ "Shift" }, "F8", function() wibar.volume_widget:toggle() end),
+    awful.key({ }, "F2", function() wibar.volume_widget:dec(5) end),
+    awful.key({ }, "F3", function() wibar.volume_widget:inc(5) end),
+    awful.key({ "Shift" }, "F4", function() wibar.volume_widget:toggle() end),
     awful.key({ }, "XF86AudioLowerVolume", function() wibar.volume_widget:dec(5) end),
     awful.key({ }, "XF86AudioRaiseVolume", function() wibar.volume_widget:inc(5) end),
     awful.key({ }, "XF86AudioMute", function() wibar.volume_widget:toggle() end),
